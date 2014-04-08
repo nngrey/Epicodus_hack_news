@@ -1,4 +1,7 @@
 HackNews::Application.routes.draw do
-  resources :links
   root to: 'links#index'
+  resources :links do
+      resources :comments
+  end
+  resources :comments
 end

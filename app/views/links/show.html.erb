@@ -1,0 +1,17 @@
+<% content_for(:title, "Show Link | Hack News") %>
+
+<h1><% @link.name %></h1>
+
+<a href="<%= @link.url %>"><%= @link.name %></a> (link domain)
+  <p>point "mins ago" | # of comments</p>
+<hr>
+
+<%= render 'comments/form' %>
+<hr>
+
+<% @link.comments.each do |comment| %>
+  <%= comment.description %>
+  <p>point "mins ago" | </p>
+<% end %>
+
+<%= link_to "Return Home", links_path, :class => "btn btn-primary" %>
