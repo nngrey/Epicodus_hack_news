@@ -1,0 +1,9 @@
+<% content_for(:title, "Index | Hack News") %>
+
+<h1>All the latest hack news links</h1>
+
+<p>new | comments | ask | jobs | <%= link_to "submit", new_link_path %></p>
+<% @links.each do |link| %>
+  <a href="<%= link.url %>"><%= link.name %></a> (link domain)
+  <p>point "mins ago" | discuss</p>
+<% end %>
