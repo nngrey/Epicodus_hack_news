@@ -4,6 +4,7 @@
 
 <p>new | comments | ask | jobs | <%= link_to "new link", new_link_path %></p>
 <% @links.each do |link| %>
+  <% link_to "^", link.add_point %>
   <a href="<%= link.url %>"><%= link.name %></a> (link domain)
   <p>point "mins ago" | <%= link_to "discuss", link_path(link) %> | <%= link_to "edit", edit_link_path(link) %> | <%= link_to "delete", link_path(link), data: {confirm: "You sure?"}, :method => "delete" %> </p>
 <% end %>

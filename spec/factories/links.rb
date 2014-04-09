@@ -16,6 +16,7 @@ FactoryGirl.define do
     name "new link"
     url "www.yahoo.com"
     id 3
+    points 0
   end
 
 end

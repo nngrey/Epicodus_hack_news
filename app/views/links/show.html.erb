@@ -3,15 +3,20 @@
 <h1><% @link.name %></h1>
 
 <a href="<%= @link.url %>"><%= @link.name %></a> (link domain)
-  <p>point "mins ago" | # of comments</p>
+  <p>point "link added mins ago" | # of comments</p>
 <hr>
 
 <%= render 'comments/form' %>
 <hr>
 
 <% @link.comments.each do |comment| %>
-  <%= comment.description %>
-  <p>point "mins ago" | </p>
+  <p><%= comment.description %></p>
+  <p>point 'comment added mins ago' | </p>
 <% end %>
 
+
+
+
+
+<hr>
 <%= link_to "Return Home", links_path, :class => "btn btn-primary" %>
