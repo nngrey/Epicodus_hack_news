@@ -1,3 +1,5 @@
+#Epicodus exercise
+
 =Hacker News clone
 
 ==Hacker News is a site where nerds post links to articles, vote on which ones they like best, and discuss the articles with comments. Let's make a simplified version of Hacker News.
